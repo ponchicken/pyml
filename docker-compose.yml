@@ -1,14 +1,8 @@
 version: '3'
-
 services:
-  app:
-    build:
-      context: .
-      dockerfile: ./Dockerfile
-    container_name: 'python'
-    working_dir: /usr/src/app
-    volumes:
-      - './:/usr/src/app'
+  web:
+    build: .
     ports:
-      - '3300:3300'
-    command: python ./src/index.py
+      - '5000:5000'
+  redis:
+    image: 'redis:alpine'

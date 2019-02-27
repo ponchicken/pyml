@@ -1,3 +1,3 @@
 docker-compose rm -f -s
 docker-compose up --remove-orphans
-docker-compose logs -f
+# docker-compose logs -f
